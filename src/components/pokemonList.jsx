@@ -12,6 +12,7 @@ export const PokemonList = () => {
 	return (
 		<section>
 			<ul
+				id="results"
 				css={{
 					listStyle: 'none',
 					marginLeft: '0',

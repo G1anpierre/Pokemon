@@ -22,7 +22,14 @@ export const PokemonDetailInfo = () => {
 					}}
 				>
 					<h1>Pokemon Detail Info</h1>
-					<h3>{specificPokemonInfo?.name}</h3>
+					<h3
+						css={{
+							margin: 0,
+							textTransform: 'uppercase',
+						}}
+					>
+						{specificPokemonInfo?.name}
+					</h3>
 				</div>
 				<div
 					css={{

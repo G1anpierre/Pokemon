@@ -1,5 +1,6 @@
 import { Button } from '../libraryUIComponents'
 import { usePokedexContext, usePokedexDispatchContext } from '../store/provider'
+import { mq } from '../styles/media-query.js'
 
 export const Navbar = ({ user, logout }) => {
 	const { darkModeStatus } = usePokedexContext()
@@ -25,7 +26,24 @@ export const Navbar = ({ user, logout }) => {
 						alignItems: 'center',
 					}}
 				>
-					<div>Logo</div>
+					<div
+						css={{
+							width: '30px',
+						}}
+					>
+						<img
+							src="/pikachu-logo.png"
+							css={{
+								background: 'transparent',
+								width: '100%',
+								aspectRatio: '5/4',
+								display: 'none',
+								[mq.medium]: {
+									display: 'block',
+								},
+							}}
+						/>
+					</div>
 					<div
 						css={{
 							display: 'flex',
@@ -38,7 +56,7 @@ export const Navbar = ({ user, logout }) => {
 							LogOut
 						</Button>
 						<Button className="header-darkmode-button" onClick={handleDarkMode}>
-							Turn {darkModeStatus}
+							{darkModeStatus}
 						</Button>
 					</div>
 				</div>

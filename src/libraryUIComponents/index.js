@@ -36,6 +36,9 @@ const Input = styled.input({
 	borderRadius: '7px',
 	border: '2px solid black',
 	textAlign: 'center',
+	'&:focus': {
+		outline: 'none',
+	},
 })
 
 const InputNumber = styled.input({

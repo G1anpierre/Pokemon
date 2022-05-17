@@ -63,9 +63,13 @@ export const Interactions = () => {
 				<div
 					css={{
 						textAlign: 'center',
+						display: 'grid',
 					}}
 				>
 					Total results {filterPokemons(pokemons, pokemonSearch).length}
+					{/* <Button> */}
+					<a href="#results">See results</a>
+					{/* </Button> */}
 				</div>
 			</div>
 		</section>
