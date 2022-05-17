@@ -1,11 +1,13 @@
 import * as React from 'react'
 import { Dialog, Button } from '../libraryUIComponents'
 import { Form } from './form'
+import { useAuth } from '../store/authProvider'
 
 import '@reach/dialog/styles.css'
 
-export const UnauthenticatedApp = ({ login, register }) => {
+export const UnauthenticatedApp = () => {
 	const [openModal, setOpenModal] = React.useState('none')
+	const { login, register } = useAuth()
 
 	const handleOpenModal = nameModal => {
 		setOpenModal(nameModal)

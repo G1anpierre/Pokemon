@@ -9,7 +9,7 @@ import { ButtonsHeader } from './buttonsHeader'
 
 const SearchResultsPassRef = React.forwardRef(SearchResults)
 
-export const AuthenticatedApp = ({ logout, user }) => {
+export const AuthenticatedApp = () => {
 	const { darkModeStatus, error, state } = usePokedexContext()
 	const containerRef = React.useRef()
 
@@ -28,7 +28,7 @@ export const AuthenticatedApp = ({ logout, user }) => {
 
 	return (
 		<div className={`${darkModeStatus}`}>
-			<Header user={user} logout={logout} />
+			<Header />
 			<Interactions />
 			<PokemonDetailInfo />
 			<ButtonsHeader

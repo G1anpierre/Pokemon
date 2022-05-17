@@ -1,10 +1,12 @@
 import { Button } from '../libraryUIComponents'
 import { usePokedexContext, usePokedexDispatchContext } from '../store/provider'
+import { useAuth } from '../store/authProvider'
 import { mq } from '../styles/media-query.js'
 
-export const Navbar = ({ user, logout }) => {
+export const Navbar = () => {
 	const { darkModeStatus } = usePokedexContext()
 	const { handleDarkMode } = usePokedexDispatchContext()
+	const { user, logout } = useAuth()
 
 	return (
 		<nav
